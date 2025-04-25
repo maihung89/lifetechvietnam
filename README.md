@@ -1,2 +1,12 @@
-# lifetechvietnam
-Phân phối và thi công máy cấp khí tươi
+---
+title: kh-t-i-2
+emoji: 🐳
+colorFrom: yellow
+colorTo: green
+sdk: static
+pinned: false
+tags:
+  - deepsite
+---
+
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference

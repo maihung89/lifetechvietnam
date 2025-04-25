@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comayjohn & Kodisen - Giải Pháp Không Khí Sạch Cho Gia Đình Việt</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.02);
+        }
+        
+        .floating-cta {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://via.placeholder.com/50x50" alt="Comayjohn & Kodisen Logo" class="h-10 mr-3">
+                <span class="text-xl font-bold text-blue-800">Comayjohn & Kodisen</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#features" class="text-gray-700 hover:text-blue-600 font-medium">Tính năng</a>
+                <a href="#benefits" class="text-gray-700 hover:text-blue-600 font-medium">Lợi ích</a>
+                <a href="#products" class="text-gray-700 hover:text-blue-600 font-medium">Sản phẩm</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-blue-600 font-medium">Đánh giá</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Liên hệ</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#features" class="block py-2 text-gray-700 hover:text-blue-600">Tính năng</a>
+            <a href="#benefits" class="block py-2 text-gray-700 hover:text-blue-600">Lợi ích</a>
+            <a href="#products" class="block py-2 text-gray-700 hover:text-blue-600">Sản phẩm</a>
+            <a href="#testimonials" class="block py-2 text-gray-700 hover:text-blue-600">Đánh giá</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600">Liên hệ</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight mb-4">
+                    Giải Pháp Loại Bỏ Bụi Mịn PM2.5, Virus Cho Không Gian Sống Khỏe Mạnh
+                </h1>
+                <p class="text-lg text-gray-600 mb-8">
+                    Công nghệ lọc đa tầng vượt trội kết hợp cấp khí tươi giàu Oxy - Bảo vệ sức khỏe gia đình & tận hưởng không gian sống lý tưởng
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300">
+                        Nhận Tư Vấn Miễn Phí
+                    </a>
+                    <a href="#products" class="bg-white hover:bg-gray-100 text-blue-600 font-bold py-3 px-6 rounded-lg text-center border border-blue-600 transition duration-300">
+                        Xem Sản Phẩm
+                    </a>
+                </div>
+                <div class="mt-8 flex items-center">
+                    <div class="flex -space-x-2">
+                        <img src="https://via.placeholder.com/40x40" alt="Customer" class="w-10 h-10 rounded-full border-2 border-white">
+                        <img src="https://via.placeholder.com/40x40" alt="Customer" class="w-10 h-10 rounded-full border-2 border-white">
+                        <img src="https://via.placeholder.com/40x40" alt="Customer" class="w-10 h-10 rounded-full border-2 border-white">
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm font-medium text-gray-700">Hơn 5,000+ gia đình tin dùng</p>
+                        <div class="flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-600 ml-1">(4.9/5)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <img src="https://via.placeholder.com/600x500" alt="Comayjohn & Kodisen Fresh Air Machine" class="rounded-lg shadow-xl floating-cta">
+                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 p-3 rounded-full mr-3">
+                            <i class="fas fa-shield-alt text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800">Bảo vệ 24/7</p>
+                            <p class="text-sm text-gray-600">Khỏi ô nhiễm không khí</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Bạn Có Đang Hít Thở Không Khí Ô Nhiễm Ngay Trong Chính Ngôi Nhà Của Mình?
+                </h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-lungs text-red-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Nguy cơ bệnh hô hấp</h3>
+                    <p class="text-gray-600">
+                        Bụi mịn PM2.5, virus, vi khuẩn có thể gây viêm phổi, hen suyễn, đặc biệt nguy hiểm cho trẻ nhỏ và người già.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-head-side-mask text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Dị ứng & kích ứng</h3>
+                    <p class="text-gray-600">
+                        Phấn hoa, nấm mốc, hóa chất từ đồ nội thất gây dị ứng, ngứa mắt, hắt hơi, ảnh hưởng chất lượng sống.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-brain text-yellow-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Mệt mỏi & giảm tập trung</h3>
+                    <p class="text-gray-600">
+                        CO2 tích tụ khiến bạn mệt mỏi, buồn ngủ, giảm hiệu suất làm việc và học tập.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-blue-50 rounded-xl p-8 md:p-10">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3 mb-6 md:mb-0">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Ô nhiễm không khí tại Việt Nam</h3>
+                        <p class="text-gray-700 mb-4">
+                            Theo WHO, Hà Nội và TP.HCM thường xuyên nằm trong top các thành phố ô nhiễm nhất Đông Nam Á. 
+                            Bụi mịn PM2.5 vượt ngưỡng an toàn 2-3 lần, đặc biệt vào mùa khô.
+                        </p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                <span>90% thời gian trong năm, chất lượng không khí ở mức cảnh báo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                <span>Không khí trong nhà có thể ô nhiễm gấp 2-5 lần ngoài trời</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                <span>Mỗi năm có khoảng 60,000 ca tử vong liên quan đến ô nhiễm không khí</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/3">
+                        <img src="https://via.placeholder.com/400x300" alt="Air pollution chart" class="rounded-lg shadow-md">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Máy Cấp Khí Tươi Comayjohn & Kodisen: Hít Sạch Thở Trong Lành
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Giải pháp chủ động cung cấp không khí sạch, loại bỏ ô nhiễm từ bên ngoài trước khi đưa vào không gian sống của bạn
+                </p>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div>
+                    <img src="https://via.placeholder.com/600x400" alt="How it works" class="rounded-lg shadow-lg">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Cơ chế hoạt động vượt trội</h3>
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4 flex-shrink-0">
+                                <i class="fas fa-wind text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">1. Hút khí tươi từ bên ngoài</h4>
+                                <p class="text-gray-600">
+                                    Hệ thống quạt công nghệ cao hút không khí từ bên ngoài với lưu lượng phù hợp cho không gian của bạn
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="bg-green-100 p-3 rounded-full mr-4 flex-shrink-0">
+                                <i class="fas fa-filter text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">2. Lọc sạch đa tầng</h4>
+                                <p class="text-gray-600">
+                                    Không khí đi qua hệ thống lọc 4 lớp (G4, Than hoạt tính, F5, HEPA H13) loại bỏ 99.97% bụi mịn PM2.5, virus, vi khuẩn
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4 flex-shrink-0">
+                                <i class="fas fa-fan text-purple-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">3. Cấp khí sạch vào nhà</h4>
+                                <p class="text-gray-600">
+                                    Không khí sạch, giàu oxy được phân bố đều khắp không gian sống của bạn
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="bg-red-100 p-3 rounded-full mr-4 flex-shrink-0">
+                                <i class="fas fa-sign-out-alt text-red-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">4. Đẩy khí ô nhiễm ra ngoài</h4>
+                                <p class="text-gray-600">
+                                    Áp suất dương tự nhiên đẩy khí thải, CO2 và các chất ô nhiễm khác ra khỏi phòng
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl p-8 shadow-lg">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Tại sao máy cấp khí tươi tốt hơn máy lọc không khí thông thường?</h3>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center p-4">
+                        <div class="feature-icon bg-blue-100 mx-auto">
+                            <i class="fas fa-exchange-alt text-blue-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Trao đổi khí liên tục</h4>
+                        <p class="text-gray-600">
+                            Không chỉ lọc sạch mà còn cung cấp khí tươi giàu oxy, trong khi máy lọc thông thường chỉ tuần hoàn khí trong phòng
+                        </p>
+                    </div>
+                    
+                    <div class="text-center p-4">
+                        <div class="feature-icon bg-green-100 mx-auto">
+                            <i class="fas fa-bacteria text-green-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Hiệu quả với CO2</h4>
+                        <p class="text-gray-600">
+                            Giảm nồng độ CO2 tích tụ trong phòng kín - vấn đề mà máy lọc thông thường không giải quyết được
+                        </p>
+                    </div>
+                    
+                    <div class="text-center p-4">
+                        <div class="feature-icon bg-purple-100 mx-auto">
+                            <i class="fas fa-leaf text-purple-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Tiết kiệm năng lượng</h4>
+                        <p class="text-gray-600">
+                            Công nghệ thu hồi nhiệt Nano Graphene giúp tiết kiệm đến 80% năng lượng so với thông gió tự nhiên
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Tại Sao Nên Chọn Máy Cấp Khí Tươi Comayjohn & Kodisen?
+                </h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-shield-virus text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Bảo vệ sức khỏe toàn diện</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Loại bỏ 99.97% bụi mịn PM2.5, virus, vi khuẩn, phấn hoa, nấm mốc - giảm nguy cơ bệnh hô hấp, dị ứng, hen suyễn
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-lungs text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Không khí giàu oxy</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Cung cấp liên tục khí tươi giàu oxy, giảm CO2 - giúp tinh thần tỉnh táo, ngủ ngon, tăng năng suất làm việc
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-wind text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Không gian thoải mái</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Khử mùi hiệu quả (thuốc lá, nấu ăn, vật nuôi), hoạt động êm ái chỉ 20dB - yên tĩnh như thì thầm
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-bolt text-yellow-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Tiết kiệm năng lượng</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Động cơ DC Inverter tiết kiệm điện, công nghệ thu hồi nhiệt giữ ấm mùa đông, mát mẻ mùa hè
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-mobile-alt text-red-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Điều khiển thông minh</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Kết nối WiFi, điều khiển qua App điện thoại, tích hợp với hệ thống smart home
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-award text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Chất lượng Châu Âu</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Sản xuất theo tiêu chuẩn EU, chứng nhận CE, RoHS, tuổi thọ cao, bảo hành 2 năm
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Dòng Sản Phẩm Comayjohn & Kodisen
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Lựa chọn giải pháp phù hợp cho không gian sống của bạn
+                </p>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition duration-300">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/600x400" alt="Comayjohn Fresh Air 300" class="w-full">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">
+                            BÁN CHẠY
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Comayjohn Fresh Air 300</h3>
+                        <p class="text-gray-600 mb-4">Phù hợp cho phòng 20-30m²</p>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-600">(4.7/5)</span>
+                        </div>
+                        
+                        <ul class="text-gray-700 space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                <span>Lọc HEPA H13, hiệu suất 99.97%</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                <span>Công suất 30m³/h, êm ái 22dB</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                <span>Điều khiển cảm ứng, 3 chế độ</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-500">Giá chỉ từ</p>
+                                <p class="text-2xl font-bold text-blue-600">12.990.000đ</p>
+                            </div>
+                            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition duration-300">
+                                Đặt mua
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition duration-300">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/600x400" alt="Kodisen Air Pro 500" class="w-full">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Kodisen Air Pro 500</h3>
+                        <p class="text-gray-600 mb-4">Phù hợp cho phòng 30-50m²</p>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-600">(5.0/5)</span>
+                        </div>
+                        
+                        <ul class="text-gray-700 space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                <span>Lọc HEPA H13 + Ion Hydroxyl khử khuẩn</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                <span>Công suất 50m³/h, êm ái 25dB</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                <span>Điều khiển App, tích hợp smart home</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-500">Giá chỉ từ</p>
+                                <p class="text-2xl font-bold text-blue-600">18.990.000đ</p>
+                            </div>
+                            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition duration-300">
+                                Đặt mua
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition duration-300">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/600x400" alt="Comayjohn Fresh Air 800" class="w-full">
+                        <div class="absolute top-4 right-4 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded">
+                            MỚI
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Comayjohn Fresh Air 800</h3>
+                        <p class="text-gray-600 mb-4">Phù hợp cho biệt thự, văn phòng 80-100m²</p>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-600">(4.9/5)</span>
+                        </div>
+                        
+                        <ul class="text-gray-700 space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                <span>Hệ thống lọc 6 lớp + UV diệt khuẩn</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                <span>Công suất 80m³/h, thu hồi nhiệt 80%</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                <span>Hệ thống ống gió phân phối đều</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-500">Giá chỉ từ</p>
+                                <p class="text-2xl font-bold text-blue-600">32.990.000đ</p>
+                            </div>
+                            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition duration-300">
+                                Đặt mua
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                    Tư vấn chọn sản phẩm phù hợp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Khách Hàng Nói Gì Về Comayjohn & Kodisen?
+                </h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg testimonial-card border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/60x60" alt="Customer" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Chị Ngọc Anh</h4>
+                            <p class="text-sm text-gray-600">Hà Nội - Mẹ của bé 3 tuổi</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Từ ngày dùng Comayjohn Fresh Air 300, bé nhà tôi hết hẳn tình trạng khò khè về đêm. Trước cứ phải mở cửa sổ thì con mới dễ thở, nhưng lại sợ bụi và muỗi. Giờ thì yên tâm hoàn toàn!"
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg testimonial-card border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/60x60" alt="Customer" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Anh Minh Đức</h4>
+                            <p class="text-sm text-gray-600">TP.HCM - Văn phòng 15 người</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Lắp Kodisen Air Pro 500 cho văn phòng, nhân viên phản hồi rất tốt. Không khí trong lành hơn hẳn, mọi người làm việc tập trung hơn, đặc biệt vào buổi chiều không còn tình trạng ngáp ngắn ngáp dài vì thiếu oxy."
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg testimonial-card border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/60x60" alt="Customer" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Bác Hoàng Văn Tâm</h4>
+                            <p class="text-sm text-gray-600">Đà Nẵng - 65 tuổi</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Tôi bị hen suyễn nhiều năm, cứ thay đổi thời tiết là khó thở. Con gái mua tặng máy Comayjohn, dùng được 3 tháng thấy đỡ hẳn, đêm ngủ ngon giấc. Tiếng máy chạy rất êm, không ảnh hưởng giấc ngủ."
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-blue-50 rounded-xl p-8">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 mb-6 md:mb-0 text-center md:text-left">
+                        <h3 class="text-2xl font-bold text-gray-800">Đã có hơn 5,000+ gia đình tin dùng</h3>
+                        <p class="text-gray-600 mt-2">Hãy trở thành người tiếp theo</p>
+                    </div>
+                    <div class="md:w-2/3">
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                            <div class="bg-white p-3 rounded-lg shadow-sm">
+                                <p class="text-3xl font-bold text-blue-600">5K+</p>
+                                <p class="text-sm text-gray-600">Sản phẩm bán ra</p>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg shadow-sm">
+                                <p class="text-3xl font-bold text-blue-600">4.9/5</p>
+                                <p class="text-sm text-gray-600">Đánh giá trung bình</p>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg shadow-sm">
+                                <p class="text-3xl font-bold text-blue-600">98%</p>
+                                <p class="text-sm text-gray-600">Khách hàng hài lòng</p>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg shadow-sm">
+                                <p class="text-3xl font-bold text-blue-600">24/7</p>
+                                <p class="text-sm text-gray-600">Hỗ trợ khách hàng</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Sẵn Sàng Hít Thở Bầu Không Khí Trong Lành, An Toàn?
+                </h2>
+                <p class="text-xl mb-8 opacity-90">
+                    Đừng để ô nhiễm không khí ảnh hưởng sức khỏe gia đình bạn. Liên hệ ngay để nhận tư vấn và giải pháp tối ưu từ chuyên gia Comayjohn & Kodisen!
+                </p>
+                
+                <div class="bg-white rounded-lg shadow-xl p-6 md:p-8 max-w-2xl mx-auto">
+                    <form id="contact-form" class="space-y-4">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-1">Họ và tên</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-1">Số điện thoại</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-1">Email (tuỳ chọn)</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-1">Nhu cầu của bạn</label>
+                            <select id="message" name="message" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Chọn nhu cầu của bạn</option>
+                                <option value="Tư vấn sản phẩm">Tư vấn sản phẩm</option>
+                                <option value="Yêu cầu báo giá">Yêu cầu báo giá</option>
+                                <option value="Đặt hàng">Đặt hàng</option>
+                                <option value="Khác">Khác</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition duration-300">
+                            Gửi Yêu Cầu Tư Vấn
+                        </button>
+                    </form>
+                    
+                    <div class="mt-6 text-center">
+                        <p class="text-gray-600">Hoặc gọi ngay cho chúng tôi</p>
+                        <a href="tel:0901234567" class="text-blue-600 font-bold text-xl hover:text-blue-700">090.123.4567</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Câu Hỏi Thường Gặp
+                </h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="accordion-item border-b border-gray-200">
+                        <button class="accordion-button w-full px-6 py-4 text-left font-medium text-gray-800 hover:bg-gray-50 focus:outline-none">
+                            <span>1. Máy cấp khí tươi khác gì so với máy lọc không khí thông thường?</span>
+                            <i class="fas fa-chevron-down ml-auto transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content px-6 pb-4 hidden">
+                            <p class="text-gray-600">
+                                Máy lọc không khí thông thường chỉ lọc và tuần hoàn không khí trong phòng, không cung cấp thêm khí tươi. Trong khi đó, máy cấp khí tươi Comayjohn & Kodisen hút không khí từ bên ngoài, lọc sạch rồi mới đưa vào phòng, đồng thời đẩy khí ô nhiễm ra ngoài, giúp không gian luôn có đủ oxy và giảm nồng độ CO2.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-b border-gray-200">
+                        <button class="accordion-button w-full px-6 py-4 text-left font-medium text-gray-800 hover:bg-gray-50 focus:outline-none">
+                            <span>2. Máy có tiêu thụ nhiều điện không?</span>
+                            <i class="fas fa-chevron-down ml-auto transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content px-6 pb-4 hidden">
+                            <p class="text-gray-600">
+                                Các dòng máy của Comayjohn & Kodisen sử dụng công nghệ DC Inverter và thu hồi nhiệt Nano Graphene giúp tiết kiệm điện năng đáng kể. Ví dụ, model 300 chỉ tiêu thụ khoảng 30W khi hoạt động, tương đương với một bóng đèn LED, rất tiết kiệm so với lợi ích mang lại.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-b border-gray-200">
+                        <button class="accordion-button w-full px-6 py-4 text-left font-medium text-gray-800 hover:bg-gray-50 focus:outline-none">
+                            <span>3. Tôi có cần lắp đặt thêm ống gió không?</span>
+                            <i class="fas fa-chevron-down ml-auto transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content px-6 pb-4 hidden">
+                            <p class="text-gray-600">
+                                Với các model dành cho căn hộ (300, 500), bạn không cần lắp thêm ống gió vì máy được thiết kế để lắp trực tiếp trên tường hoặc cửa sổ. Chỉ với các model công suất lớn (800 trở lên) dành cho biệt thự, văn phòng rộng thì cần hệ thống ống gió để phân phối khí đều khắp các phòng.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-b border-gray-200">
+                        <button class="accordion-button w-full px-6 py-4 text-left font-medium text-gray-800 hover:bg-gray-50 focus:outline-none">
+                            <span>4. Thời gian bảo hành là bao lâu?</span>
+                            <i class="fas fa-chevron-down ml-auto transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content px-6 pb-4 hidden">
+                            <p class="text-gray-600">
+                                Tất cả sản phẩm Comayjohn & Kodisen được bảo hành chính hãng 24 tháng cho động cơ và 12 tháng cho các bộ phận khác. Trong thời gian bảo hành, chúng tôi hỗ trợ sửa chữa hoặc thay thế linh kiện miễn phí nếu có lỗi từ nhà sản xuất.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-button w-full px-6 py-4 text-left font-medium text-gray-800 hover:bg-gray-50 focus:outline-none">
+                            <span>5. Bao lâu thì cần thay lõi lọc?</span>
+                            <i class="fas fa-chevron-down ml-auto transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content px-6 pb-4 hidden">
+                            <p class="text-gray-600">
+                                Tùy thuộc vào mức độ ô nhiễm không khí tại khu vực bạn sống, thông thường:
+                                <br>- Lọc thô G4: 3-6 tháng (có thể vệ sinh)
+                                <br>- Lọc than hoạt tính: 6-12 tháng
+                                <br>- Lọc HEPA H13: 12-18 tháng
+                                <br>Máy có chức năng cảnh báo khi cần thay lọc. Chúng tôi sẽ nhắc bạn khi đến kỳ thay lọc và hỗ trợ vận chuyển lõi lọc mới đến tận nhà.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/40x40" alt="Logo" class="h-8 mr-2">
+                        <span class="text-xl font-bold">Comayjohn & Kodisen</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Giải pháp không khí sạch hàng đầu cho gia đình và văn phòng Việt Nam
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-zalo"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Liên hệ</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">Số 123, đường ABC, quận XYZ, Hà Nội</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">090.123.4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">contact@comayjohnkodisen.vn</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Sản phẩm</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Comayjohn Fresh Air 300</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Kodisen Air Pro 500</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Comayjohn Fresh Air 800</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Phụ kiện & Lõi lọc</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Hỗ trợ</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Chính sách bảo hành</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Câu hỏi thường gặp</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Đặt lịch bảo trì</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    © 2023 Comayjohn & Kodisen. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Điều khoản sử dụng</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Chính sách bảo mật</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition duration-300">
+            <i class="fas fa-phone-alt text-xl"></i>
+        </a>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Accordion functionality
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('transform');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would normally send the form data to your server
+            // For demo purposes, we'll just show an alert
+            alert('Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất có thể.');
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=maihung89/kh-t-i-2" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
